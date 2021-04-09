@@ -1,8 +1,12 @@
-const { getCoffees } = require('./coffee')
-const { getBeers } = require('./beer')
+const { getBeers } = require('./getBeers')
+const { getCoffees, getCoffeesTitles } = require('./getCoffees')
 
 const coolDude = 'Jbro'
 
-getCoffees(coolDude)
+// getCoffees(coolDude)
 
-getBeers(coolDude)
+getCoffeesTitles()
+
+// getBeers(coolDude)
+
+

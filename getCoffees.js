@@ -1,6 +1,14 @@
-const allCoffees = require('./data/allCoffees.json')
+const fetch = require('node-fetch')
 
-// console.log('this is my list of coffees', coffees)
+let allCoffees = []
+
+fetch('https://api.sampleapis.com/coffee/hot')
+  .then(response => response.json())
+  .then(data => {
+    console.log(data)
+    allCoffees = data
+  })
+  .catch(err => console.log('Error fetching API: ', err))
 
 exports.getCoffees = (name) => {
   allCoffees.forEach((recipe) => {
